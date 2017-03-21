@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlv_trade_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader
+        android:id="@+id/recyclerview_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top">
+
+        <RelativeLayout
+            android:id="@+id/rlv_trade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_first"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+
+                <TextView
+                    android:id="@+id/txt_arrive_num_tem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="到诊人数："
+                    android:textColor="@color/header_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_arrive_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txt_arrive_num_tem"
+                    android:text="0"
+                    android:textColor="@color/header_bg"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_arrive_num_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txt_arrive_num"
+                    android:text="人"
+                    android:textColor="@color/header_bg"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@id/txt_arrive_num_unit"
+                    android:background="@color/text_hint" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_below="@id/rl_first"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/txt_deal_num_tem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="成交人数："
+                    android:textColor="@color/header_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_deal_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txt_deal_num_tem"
+                    android:text="0"
+                    android:textColor="@color/header_bg"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_deal_num_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txt_deal_num"
+                    android:text="人"
+                    android:textColor="@color/header_bg"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@id/txt_deal_num_unit"
+                    android:background="@color/text_hint" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/rl_first">
+
+                <TextView
+                    android:id="@+id/txt_trade_rate_num_tem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="成交率："
+                    android:textColor="@color/header_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_trade_rate_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txt_trade_rate_num_tem"
+                    android:text="0"
+                    android:textColor="@color/header_bg"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txt_trade_rate_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txt_trade_rate_num"
+                    android:text="%"
+                    android:textColor="@color/header_bg"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@id/txt_trade_rate_unit"
+                    android:background="@color/text_hint" />
+            </RelativeLayout>
+
+            <Spinner
+                android:id="@+id/sp_data_type"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/sp_gold_bg"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="3dp"
+                android:popupBackground="@drawable/sp_gold_bg" /><!--android:background="@drawable/txt_gold_bg"-->
+
+        </RelativeLayout>
+    </com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader>
+
+    <ProgressBar
+        android:id="@+id/loading_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminateDrawable="@drawable/progressbar"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/no_value_view"
+        layout="@layout/layout_no_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

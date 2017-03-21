@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg">
+
+    <include
+        android:id="@+id/header_view"
+        layout="@layout/header_layout" />
+
+    <RelativeLayout
+        android:id="@+id/rl_month"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/header_view"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txt_before_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="55dp"
+            android:gravity="center"
+            android:text="上个月"
+            android:textColor="@color/gray_7"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_current_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="2016年10月"
+            android:textColor="@color/header_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_next_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="55dp"
+            android:gravity="center"
+            android:text="下个月"
+            android:textColor="@color/gray_7"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/listview_divier" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_week"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/rl_month"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@color/white">
+
+        <TextView
+            style="@style/weekName"
+            android:text="日" />
+
+        <TextView
+            style="@style/weekName"
+            android:text="一" />
+
+        <TextView
+            style="@style/weekName"
+            android:text="二" />
+
+        <TextView
+            style="@style/weekName"
+            android:text="三" />
+
+        <TextView
+            style="@style/weekName"
+            android:text="四" />
+
+        <TextView
+            style="@style/weekName"
+            android:text="五" />
+
+        <TextView
+            style="@style/weekName"
+            android:text="六" />
+    </LinearLayout>
+
+    <ViewFlipper
+        android:id="@+id/flipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_week"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/flipper"
+        android:background="@color/listview_divier" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_work_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line2" />
+
+    <ProgressBar
+        android:id="@+id/loading_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminateDrawable="@drawable/progressbar"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

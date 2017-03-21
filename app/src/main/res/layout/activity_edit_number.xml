@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/txt_edit_header_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="产品信息"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_title"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/layout_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_number_tem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="数量："
+                android:textColor="@color/header_text"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/txt_edit_bg">
+
+                <ImageView
+                    android:id="@+id/ic_delete_number"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_delete_number" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="1dp"
+                    android:layout_height="33dp"
+                    android:layout_toRightOf="@id/ic_delete_number"
+                    android:background="#d9d6d6" />
+
+                <EditText
+                    android:id="@+id/edt_project_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@id/line1"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:text="25"
+                    android:textColor="@color/header_text"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ic_add_number"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:padding="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_add_number" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="1dp"
+                    android:layout_height="33dp"
+                    android:layout_toLeftOf="@id/ic_add_number"
+                    android:background="#d9d6d6" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/layout_number"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_price_tem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="单价："
+                android:textColor="@color/header_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_project_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/txt_edit_bg"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:text="3880"
+                android:textColor="@color/header_bg"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_remark_tem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_price"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="备注："
+            android:textColor="@color/header_text"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edt_project_remark"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@id/layout_price"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/txt_remark_tem"
+            android:background="@drawable/txt_edit_bg"
+            android:gravity="top"
+            android:hint="备注信息"
+            android:maxHeight="100dp"
+            android:padding="10dp"
+            android:textColor="@color/header_text"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/edt_project_remark"
+            android:layout_alignRight="@id/edt_project_remark"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp">
+
+            <TextView
+                android:id="@+id/txt_current_words"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/gray_7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/txt_current_words"
+                android:text="/50"
+                android:textColor="@color/gray_7" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_project_remark"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="套餐不能修改购买数量，如需多次购买请多次下单"
+            android:textColor="@color/red"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_content"
+        android:background="@drawable/txt_edit_bottom_bg"
+        android:paddingTop="10dp">
+
+        <View
+            android:id="@+id/line5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d9d6d6" />
+
+        <View
+            android:id="@+id/line6"
+            android:layout_width="1dp"
+            android:layout_height="47dp"
+            android:layout_centerHorizontal="true"
+            android:background="#d9d6d6" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/line6"
+            android:background="@color/transparent"
+            android:text="取消"
+            android:textColor="@color/gray_7"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/line6"
+            android:background="@color/transparent"
+            android:text="确认"
+            android:textColor="@color/header_bg"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</RelativeLayout>

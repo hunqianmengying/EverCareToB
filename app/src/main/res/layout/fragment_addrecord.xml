@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg">
+
+    <RelativeLayout
+        android:id="@+id/layout_tem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/txt_attentionproject_tem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关注项目"
+            android:textColor="@color/header_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_projectname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_arrow"
+            android:text="请选择关注项目"
+            android:textColor="@color/gray_7"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <EditText android:id="@+id/edt_remark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_tem"
+        android:layout_marginBottom="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle_rectangle_bg"
+        android:gravity="top|left"
+        android:hint="备注信息..."
+        android:paddingLeft="25dp"
+        android:paddingTop="5dp"/>
+
+    <Button
+        android:id="@+id/btn_savetask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/header_bg"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    <ProgressBar
+        android:id="@+id/login_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminateDrawable="@drawable/progressbar"
+        android:visibility="gone" />
+</RelativeLayout>

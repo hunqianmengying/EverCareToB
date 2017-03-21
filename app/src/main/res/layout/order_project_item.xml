@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/circle_rectangle_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txt_project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:maxWidth="185dp"
+            android:text="伊婉"
+            android:textColor="@color/header_text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="@dimen/padding_8"
+            android:text="2017-01-01"
+            android:textColor="@color/gray_7"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_buy_number_tem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/txt_project_name"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="@dimen/padding_8"
+            android:text="订购次数："
+            android:textColor="@color/gray_7"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_buy_num_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_project_name"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/txt_buy_number_tem"
+            android:text="（"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_buy_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_project_name"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/txt_buy_num_left"
+            android:text="0"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_buy_num_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_project_name"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/txt_buy_num"
+            android:text="）"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_left_tem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txt_project_name"
+            android:text="（剩余 "
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/txt_residue_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txt_left_tem"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxWidth="30dp"
+            android:text="0"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/txt_residue_num"
+            android:text="）"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/txt_time"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="6dp"
+            android:text="0"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_pay_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_time"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@id/txt_pay"
+            android:text="¥"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

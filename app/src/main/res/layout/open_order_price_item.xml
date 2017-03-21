@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:paddingBottom="2dp"
+    android:background="@drawable/circle_rectangle_bg"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_price_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_price"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/txt_price_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="25dp"
+            android:text="激光脱毛激而且我我二人额外人额外热舞让我如此外人光脱毛激"
+            android:textColor="#444444"
+            android:textSize="14sp" />
+        <ImageView
+            android:id="@+id/expend_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_8"
+            android:src="@drawable/ic_arrow_down"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_4"
+            android:text="数量:10"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/txt_price_name"
+            android:textColor="@color/colorPrimary"
+            android:paddingBottom="@dimen/padding_4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/txt_price_name"
+            android:layout_toRightOf="@+id/money_text"
+            android:paddingBottom="@dimen/padding_4"
+            android:text="3999"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/money_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_price_name"
+            android:layout_toRightOf="@+id/count_text"
+            android:text="¥"
+            android:layout_marginLeft="40dp"
+            android:paddingBottom="@dimen/padding_4"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rl_price"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="20dp"
+        android:text=""
+
+        android:textColor="#777777"
+        android:paddingBottom="@dimen/padding_4"
+        android:textSize="12sp" />
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:background="@drawable/dotted_line"
+        android:layout_below="@+id/description"
+        android:layout_marginTop="@dimen/padding_4"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

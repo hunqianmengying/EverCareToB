@@ -1,0 +1,1 @@
+include ':app', ':swipelayout',':MPChartLib',':Rong_Cloud_Android_IMKit_SDK_v2_7_2_stable'

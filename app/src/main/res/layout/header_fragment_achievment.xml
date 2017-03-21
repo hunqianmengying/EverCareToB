@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/sales_volume_tem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/sales_volume"
+        android:drawablePadding="@dimen/padding_8"
+        android:text="销售额："
+        android:textColor="@color/header_bg" />
+
+    <TextView
+        android:id="@+id/sales_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="--"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/sales_volume_tem"
+        android:textColor="@color/header_bg" />
+
+    <TextView
+        android:id="@+id/received_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:text="--"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/header_bg" />
+
+    <TextView
+        android:id="@+id/target_volume_tem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_volume_tem"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@drawable/target_volume"
+        android:drawablePadding="@dimen/padding_8"
+        android:text="目标额："
+        android:textColor="@color/paget_sliding_text"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/target_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/sales_volume_tem"
+        android:layout_marginBottom="16dp"
+        android:text="--"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/target_volume_tem"
+        android:textColor="@color/header_bg"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/received_volume_tem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/received_volume"
+        android:layout_toLeftOf="@+id/received_volume"
+        android:layout_toStartOf="@+id/received_volume"
+        android:drawableLeft="@drawable/received_volume"
+        android:drawablePadding="@dimen/padding_8"
+        android:text="收银额："
+        android:textColor="@color/header_bg" />
+
+
+</RelativeLayout>

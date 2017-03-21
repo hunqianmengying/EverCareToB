@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/txt_day_number"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:text="15"
+        android:textColor="@color/header_text"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_work_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/img_followin"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/ic_followin" />
+
+        <TextView
+            android:id="@+id/txt_up_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0"
+            android:textSize="8sp" />
+
+        <ImageView
+            android:id="@+id/img_face_diagnose"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/img_followin"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_facediagnose" />
+
+        <TextView
+            android:id="@+id/txt_face_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/img_followin"
+            android:layout_marginTop="1dp"
+            android:text="0"
+            android:textSize="8sp" />
+    </RelativeLayout>
+</RelativeLayout>

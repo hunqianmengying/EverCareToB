@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/header_include"
+            layout="@layout/header_layout" />
+
+        <com.evercare.app.view.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/header_include"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            app:pstsDividerColor="@color/driver_sliding_text"
+            app:pstsIndicatorColor="@color/header_bg"
+            app:pstsIndicatorHeight="2dp"
+            app:pstsShouldExpand="true"
+            app:pstsUnderlineHeight="2dp"
+            app:selectedTabTextColor="@color/paget_sliding_text"
+            app:zmsSelectedTabTextSize="14sp"
+            app:zmsTabTextSize="14sp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/customer_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabs"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+</FrameLayout>

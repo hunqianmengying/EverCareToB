@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg">
+
+    <RelativeLayout
+        android:id="@+id/layout_situation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_view"
+        android:background="@color/white"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/txt_situation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="任务场景"
+            android:textColor="@color/header_text"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/txt_situation"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdb_followin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radionbutton_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="跟进"
+                android:textColor="@color/radiobtn_txtcolor"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rdb_facediagnose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/radionbutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:text="预约"
+                android:textColor="@color/radiobtn_txtcolor"
+                android:textSize="16sp" />
+        </RadioGroup>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_tem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_situation"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/txt_attentionproject_tem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关注项目"
+            android:textColor="@color/header_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_projectname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_arrow"
+            android:text="请选择关注项目"
+            android:textColor="@color/gray_7"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/layout_tem"
+        android:layout_marginLeft="0dp"
+        android:background="@color/listview_divier" />
+
+    <RelativeLayout
+        android:id="@+id/time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:background="@color/white"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/txt_taskdate_tem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="任务时间"
+            android:textColor="@color/header_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_taskdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/ic_arrow"
+            android:text="2016-09-06"
+            android:textColor="@color/gray_7"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edt_remark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/time_layout"
+        android:layout_marginBottom="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle_rectangle_bg"
+        android:gravity="top|left"
+        android:hint="备注信息..."
+        android:paddingLeft="25dp"
+        android:paddingTop="5dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_savetask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/header_bg"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminateDrawable="@drawable/progressbar"
+        android:visibility="gone" />
+</RelativeLayout>

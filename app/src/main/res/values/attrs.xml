@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ViewPagerIndicator">
+        <!--可见tab数量-->
+        <attr name="tab_visible_count" format="integer" />
+        <!--tab标签文字大小(sp)-->
+        <attr name="tab_text_size" format="integer" />
+        <!--正常字体颜色-->
+        <attr name="tab_text_normal_color" format="color" />
+        <!--高亮字体颜色-->
+        <attr name="tab_text_highlight_color" format="color" />
+        <!--横线颜色-->
+        <attr name="tab_line_color" format="color" />
+        <!--横线高度(dp)-->
+        <attr name="tab_line_height" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="FlowLayout">
+        <attr name="width_space" format="dimension"/>
+        <attr name="height_space" format="dimension"/>
+    </declare-styleable>
+    <!--开关-->
+    <declare-styleable name="SwitchButton">
+        <attr name="frameDrawable" format="reference|color"/>
+        <attr name="stateDrawable" format="reference|color"/>
+        <attr name="stateMaskDrawable" format="reference|color"/>
+        <attr name="sliderDrawable" format="reference|color"/>
+        <attr name="withTextInterval" format="dimension"/>
+    </declare-styleable>
+    <!--圆形头像-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+</resources>

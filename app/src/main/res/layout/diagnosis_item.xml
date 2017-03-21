@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_bg" />
+
+    <TextView
+        android:id="@+id/tv_sticky_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:background="@color/gray_bg"
+        android:padding="10dp"
+        android:textColor="@color/header_text"
+        android:textSize="14sp"
+        tools:text="吸顶文本" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/tv_sticky_header_view"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/txt_customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="1dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:maxWidth="100dp"
+            android:text="张法方复"
+            android:textColor="@color/header_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_customer_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="100dp"
+
+            android:background="@drawable/txt_circle_green_bg"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:text="初诊"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/txt_billing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/yellow_shadow"
+            android:focusable="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="开单"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txt_project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/txt_billing"
+            android:background="@drawable/txt_gold_bg"
+            android:paddingBottom="1dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="1dp"
+            android:text="玻尿酸"
+            android:textColor="@color/txt_gold"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

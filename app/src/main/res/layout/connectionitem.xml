@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/circle_rectangle_bg">
+
+    <TextView
+        android:id="@+id/txt_connectdetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:text="我想做双眼皮，去哪个医院！"
+        android:textColor="@color/header_text" />
+
+    <com.evercare.app.view.NoScrollGridView
+        android:id="@+id/grv_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_connectdetail"
+        android:numColumns="4"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp" />
+
+    <TextView
+        android:id="@+id/txt_name_tem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grv_images"
+        android:layout_marginLeft="10dp"
+        android:text="客户："
+        android:textColor="@color/header_bg" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grv_images"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/txt_name_tem"
+        android:text="张丹妮"
+        android:textColor="@color/header_bg" />
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/grv_images"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:text="2016-09-11"
+        android:textColor="@color/gray_8a" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlv_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_name_tem"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edt_review"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt_bd"
+            android:gravity="top"
+            android:hint="请输入回复内容..."
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_review"
+            android:layout_margin="10dp"
+            android:text="取消"
+            android:textColor="@color/gray_8a" />
+
+        <TextView
+            android:id="@+id/txt_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/edt_review"
+            android:layout_margin="10dp"
+            android:text="回复"
+            android:textColor="@color/header_bg" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="#303069"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardPreventCornerOverlap="true"
+    card_view:cardUseCompatPadding="true">
+
+    <com.evercare.app.view.SwipeDragLayout
+        android:id="@+id/sample"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:clickable="true"
+        app:click_to_close="true"
+        app:click_to_open="false">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:tag="Bottom2">
+
+            <TextView
+                android:id="@+id/agree_text"
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_2"
+                android:gravity="center"
+                android:text="同意"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/cancle_text"
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/delete_text"
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:gravity="center"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="刘丹丹"
+                    android:textColor="#444444"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_text"
+                    android:layout_marginTop="3dp"
+                    android:text="2016-9-21"
+                    android:textColor="#777777"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/product_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentRight="true"
+                    android:text="双眼皮"
+                    android:textColor="#444444"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/state_text"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/product_text"
+                    android:layout_marginTop="3dp"
+                    android:text="用户预约"
+                    android:gravity="right"
+                    android:textColor="#777777"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View android:background="@color/line_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+    </com.evercare.app.view.SwipeDragLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,23 @@
+<tabs>
+    <tab
+        id="@+id/bottomBarHome"
+        icon="@drawable/tabicon_bg_change_one"
+
+        title="首页" />
+    <tab
+        id="@+id/bottomBarLocation"
+        icon="@drawable/tabicon_bg_change_two"
+        title="客户" />
+    <tab
+        id="@+id/bottomBarMessage"
+        icon="@drawable/tabicon_bg_change_three"
+        title="发现" />
+    <!--<tab-->
+        <!--id="@+id/bottomConsult"-->
+        <!--icon="@drawable/tabicon_bg_change_four"-->
+        <!--title="咨询" />-->
+    <tab
+        id="@+id/bottomBarMe"
+        icon="@drawable/tabicon_bg_change_five"
+        title="我的" />
+</tabs>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp">
+
+    <TextView
+        android:id="@+id/tv_sticky_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_bg"
+        android:padding="10dp"
+        android:textColor="@color/header_text"
+        android:textSize="14sp"
+        tools:text="吸顶文本" />
+
+    <com.evercare.app.view.SlidingButtonView
+        android:id="@+id/slidingbutton_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_sticky_header_view"
+        android:layout_marginBottom="1dp"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/rl_content_wrapper"
+                android:background="@color/green">
+
+                <TextView
+                    android:id="@+id/tv_delete"
+                    android:layout_width="49dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tv_edit_time"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:text="取 消"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_edit_time"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/header_bg"
+                    android:gravity="center"
+                    android:text="编辑时间"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_content_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:padding="3dp"
+                    android:textColor="@color/header_text"
+                    android:textSize="16sp"
+                    tools:text="张丹妮" />
+
+                <TextView
+                    android:id="@+id/task_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:padding="3dp"
+                    android:textColor="@color/header_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_name"
+                    android:padding="3dp"
+                    android:textColor="@color/header_text"
+                    android:textSize="16sp"
+                    tools:text="面诊" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/tv_name"
+                    android:padding="4dp"
+                    android:textColor="@color/gray_8a"
+                    android:textSize="14sp"
+                    tools:text="2016-09-22" />
+
+                <TextView
+                    android:id="@+id/tv_project_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tv_birthday"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/ic_arrow"
+                    android:background="@drawable/txt_gold_bg"
+                    android:paddingBottom="1dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:paddingTop="1dp"
+                    android:text="玻尿酸"
+                    android:textColor="@color/txt_gold"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/ic_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/ic_arrow" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </com.evercare.app.view.SlidingButtonView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/slidingbutton_view"
+        android:background="@color/gray_bg" />
+</RelativeLayout>

@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </android.support.v4.view.ViewPager>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/my_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/main.collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_bg"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/header_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp">
+
+                    <ImageView
+                        android:id="@+id/img_touxiang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginLeft="35dp"
+                        android:src="@drawable/ic_girl" />
+
+
+                    <ImageView
+                        android:id="@+id/img_open_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginRight="35dp"
+                        android:src="@drawable/ic_showpoint"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_open_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginRight="35dp"
+                        android:src="@drawable/ic_connectmessage" />
+
+
+                    <TextView
+                        android:id="@+id/txt_age_tem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="70dp"
+                        android:layout_toRightOf="@+id/img_touxiang"
+                        android:text="年龄："
+                        android:textColor="@color/header_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txt_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        android:layout_toRightOf="@id/txt_age_tem"
+
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_birth_tem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_age_tem"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/img_touxiang"
+                        android:text="生日："
+                        android:textColor="@color/header_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txt_birth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_age_tem"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/txt_birth_tem"
+
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/header_view"
+                    android:layout_marginLeft="35dp"
+                    android:background="@color/input_border" />
+
+                <RelativeLayout
+                    android:id="@+id/view_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line1"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/txt_customercard_tem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="客户卡号："
+                        android:textColor="@color/header_text"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_customer_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txt_customercard_tem"
+
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_illcase_tem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_customercard_tem"
+                        android:layout_marginTop="10dp"
+                        android:text="病案号："
+                        android:textColor="@color/header_text"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_illcase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_customercard_tem"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_toRightOf="@id/txt_illcase_tem"
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/view_2"
+                    android:layout_marginLeft="35dp"
+                    android:background="@color/input_border" />
+
+
+                <RelativeLayout
+                    android:id="@+id/view_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line2"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/txt_totalamount_tem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收银总金额："
+                        android:textColor="@color/header_text"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_totalamount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txt_totalamount_tem"
+
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_advanceremaining_tem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_totalamount_tem"
+                        android:layout_marginTop="10dp"
+                        android:text="预收剩余："
+                        android:textColor="@color/header_text"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_advanceremaining"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_totalamount_tem"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/txt_advanceremaining_tem"
+
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_happybremaining_tem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_advanceremaining_tem"
+                        android:layout_marginTop="10dp"
+                        android:text="幸福宝剩余："
+                        android:textColor="@color/header_text"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_happybremaining"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_advanceremaining_tem"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/txt_happybremaining_tem"
+
+
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/view_3"
+                    android:layout_marginLeft="35dp"
+                    android:background="@color/input_border" />
+
+                <RelativeLayout
+                    android:id="@+id/view_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line3"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp"
+                    android:paddingBottom="80dp">
+
+                    <TextView
+                        android:id="@+id/txt_lastdoctor_tem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="末次治疗医生："
+                        android:textColor="@color/header_text"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_lastdoctor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txt_lastdoctor_tem"
+                        android:text=""
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_lastconsumedate_tem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_lastdoctor_tem"
+                        android:layout_marginTop="10dp"
+                        android:text="本次消费时间："
+                        android:textColor="@color/header_text"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_lastconsumedate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_lastdoctor_tem"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/txt_lastconsumedate_tem"
+
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_lastcuredate_tem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_lastconsumedate_tem"
+                        android:layout_marginTop="10dp"
+                        android:text="本次治疗时间："
+                        android:textColor="@color/header_text"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_lastcuredate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_lastconsumedate_tem"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/txt_lastcuredate_tem"
+
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/txt_lastfollowdate_tem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_lastcuredate_tem"
+                        android:layout_marginTop="10dp"
+                        android:text="最近跟单时间："
+                        android:textColor="@color/header_text"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_lastfollowdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_lastcuredate_tem"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/txt_lastfollowdate_tem"
+                        android:textColor="@color/font_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/remark_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_lastfollowdate_tem"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="3"
+                        android:scrollbars="vertical"
+                        android:text="备注:"
+                        android:textColor="@color/header_text"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/header_bg"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txt_customername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/custom_phone"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:textColor="@color/white"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/custom_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:drawableLeft="@drawable/customer_hone"
+                        android:drawablePadding="@dimen/padding_8"
+                        android:gravity="right"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <com.evercare.app.view.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            app:pstsDividerColor="@color/driver_sliding_text"
+            app:pstsIndicatorColor="@color/header_bg"
+            app:pstsIndicatorHeight="2dp"
+            app:pstsShouldExpand="true"
+            app:pstsUnderlineHeight="2dp"
+            app:selectedTabTextColor="@color/paget_sliding_text"
+            app:zmsSelectedTabTextSize="14sp"
+            app:zmsTabTextSize="14sp" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="80dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/ic_add_white_24dp" />
+
+    <!--   <RelativeLayout
+           android:id="@+id/bottom_layout"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:layout_gravity="bottom"
+           android:background="@color/white">
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="@color/gray_bg" />
+
+           <TextView
+               android:id="@+id/txt_confirm"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:layout_marginRight="20dp"
+               android:gravity="center"
+               android:text="提交"
+               android:textColor="@color/header_bg"
+               android:textSize="16sp" />
+
+           <EditText
+               android:id="@+id/etxt_addrecord"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_margin="15dp"
+               android:layout_toLeftOf="@id/txt_confirm"
+               android:background="@drawable/search_view_bg"
+               android:hint="添加记录..."
+               android:padding="5dp" />
+       </RelativeLayout>-->
+
+</android.support.design.widget.CoordinatorLayout>

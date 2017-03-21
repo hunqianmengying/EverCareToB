@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.evercare.app">
+
+    <permission
+        android:name="com.evercare.app.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    <!--友盟权限  开始-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <!--友盟权限  结束-->
+
+
+    <!--极光推送开始-->
+    <uses-permission android:name="com.evercare.app.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+
+    <!--极光推送结束-->
+
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <application
+        android:name="com.evercare.app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Design"
+        tools:replace="android:icon, android:label, android:theme, android:name">
+        <activity
+            android:name="com.evercare.app.Activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.evercare.app.Activity.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.evercare.app.Activity.MainActivity"
+            android:parentActivityName="com.evercare.app.Activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.evercare.app.Activity.SplashActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <data
+                android:host="com.evercare.app"
+                android:pathPrefix="/conversationlist"
+                android:scheme="rong" />
+        </activity>
+
+        <activity
+            android:name=".Activity.ConversationActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.evercare.app"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.evercare.app.Activity.SettingActivity"
+            android:label="设置"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value="com.foodie.app.Activity.SearchResultsActivity" />
+
+        <activity
+            android:name="com.evercare.app.Activity.AppointmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.evercare.app.Activity.TradeRatesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.evercare.app.Activity.CustomerInfoViewPagerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="com.evercare.app.Activity.PreferenceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.evercare.app.Activity.SearchCaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.evercare.app.Activity.AlreadyOpenOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.evercare.app.Activity.OpenOrderPriceListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.evercare.app.Activity.InformationMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.evercare.app.Activity.AchievmentActivity"
+            android:screenOrientation="portrait" />
+        <!--集成友盟分享   开始-->
+        <!--微信-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--QQ-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105924842" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--分享编辑页-->
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UMDefault" />
+
+        <!--友盟appkey-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5805eb0867e58ea170002dc2" />
+        <!--集成友盟分享   结束-->
+
+
+        <activity
+            android:name="com.evercare.app.Activity.CreateTaskActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.evercare.app.Activity.SearchProjectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.evercare.app.Activity.SelectDateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name="com.evercare.app.Activity.CalendarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" />
+
+        <activity
+            android:name="com.evercare.app.Activity.PriceListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.evercare.app.Activity.SearchCustomerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.evercare.app.Activity.EditNumberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name=".Activity.ProjectListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.evercare.app.Activity.TodayOpenOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activity.AppointmentProjectActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.evercare.app.Activity.CustomerBirthdayActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.evercare.app.Activity.MaturingCustomerActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.evercare.app.Activity.FollowDiagnoseActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name="com.evercare.app.Activity.OpenOrderActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.evercare.app.Activity.TodayWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.evercare.app.Activity.BackReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.evercare.app.Activity.WorkCalendarActivity"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name="com.evercare.app.Activity.NewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.evercare.app.Activity.AddCustomerActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.evercare.app.Activity.Work_BackReviewActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!-- 极光推送 开始-->
+
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.evercare.app" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false"></service>
+
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.evercare.app.broadcast.NetWorkReceiver">
+            <intent-filter>
+                <!-- 接收网络变化的广播 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!--Required  显示通知栏 -->
+                <category android:name="com.evercare.app" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="1d1b43349f70adca9debf235" /> <!--  </>值来自开发者平台取得的AppKey-->
+        <!-- 极光推送  结束-->
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Wandoujia" />
+    </application>
+</manifest>

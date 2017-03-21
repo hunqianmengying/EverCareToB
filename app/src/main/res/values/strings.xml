@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CRM</string>
+
+  <string name="cheese_ipsum">Jarlsberg lancashire edam. Dolcelatte hard cheese brie st. agur blue
+    cheese caerphilly bavarian bergkase cheese and biscuits mascarpone. Cheeseburger swiss bavarian
+    bergkase cream cheese fromage frais cheesy feet port-salut airedale. St. agur blue cheese rubber
+    cheese caerphilly cheddar cheesecake cream cheese manchego lancashire. Roquefort squirty cheese
+    the big cheese.</string>
+    <string name="checkin">Checkin</string>
+    <string name="menu_settings">设置</string>
+    <string name="title_activity_login">登录用户</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">输入你的手机号</string>
+    <string name="prompt_password">输入你的密码</string>
+    <string name="prompt_password_again">输入你的密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="error_invalid_email">手机号无效</string>
+    <string name="error_invalid_password">密码太短了</string>
+    <string name="error_incorrect_password">密码不正确</string>
+    <string name="error_field_required">该项必须填</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="action_register">还没有帐号?</string>
+    <string name="action_re_password">再次输入密码</string>
+    <string name="prompt_nickname">输入你的昵称</string>
+    <string name="user_id">userId</string>
+    <string name="sales_amount">销售额</string>
+    <string name="new_turnover_rate">新客成交率</string>
+    <string name="old_turnover_rate">老客成交率</string>
+
+
+    <string name="app_key">8luwapkvuqecl</string>
+    <string name="app_secret">E0eakx5Py0</string>
+
+
+    <item name="tag_color" type="id"></item>
+    <item name="tag_click_able" type="id"></item>
+
+  <string name="net_work_error">网络异常,稍后重试</string>
+
+</resources>

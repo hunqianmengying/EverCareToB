@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:bb_activeTabAlpha="1"
+        app:bb_inActiveTabAlpha="0.6"
+        app:bb_inActiveTabColor="#222222"
+        app:bb_tabXmlResource="@xml/bottombar_menu"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/net_status_bar_top"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="#ffdfdf"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="10.0dip"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/rc_status_bar_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="27dp"
+            android:src="@drawable/rc_ic_notice_wraning" />
+
+        <TextView
+            android:id="@+id/net_status_bar_info_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="25dp"
+            android:text="@string/rc_notice_network_unavailable"
+            android:textColor="#776868"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</RelativeLayout>

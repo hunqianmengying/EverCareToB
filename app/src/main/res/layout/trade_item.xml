@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txt_customer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="张丹妮"
+        android:textColor="@color/header_text"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_customer_name"
+        android:layout_marginLeft="15dp"
+        android:drawableLeft="@drawable/ic_smallclock"
+        android:drawablePadding="4dp"
+        android:text="2016-09-11"
+        android:textColor="@color/font_gray"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txt_project_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@id/txt_customer_name"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="玻尿酸"
+        android:textColor="@color/gray_7"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txt_project_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txt_project_name"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="0dp"
+        android:text="3999"
+        android:textColor="@color/header_bg"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txt_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_project_name"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="0dp"
+        android:layout_toLeftOf="@id/txt_project_price"
+        android:text="¥"
+        android:textColor="@color/header_bg"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txt_no_deal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:text="未成交"
+        android:textColor="@color/gray_7"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>
